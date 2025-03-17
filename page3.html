@@ -16,14 +16,30 @@
     
     <div class="container">
         <h1>Page 3: Wild Zone</h1>
+        
         <div id="nonFocusable">Click Me!</div>
         <p>Gold means go!</p>
+        
+        <button onclick="alert('Surprise!')">Annoying Popup</button>
+        <div id="fakeButton">I’m a Button (Not Really)</div>
+        
+        <p>Watch this spin:</p>
+        <span id="spinny">Wheeee</span>
     </div>
     
     <script>
+        // Fix flickering
         setInterval(() => {
-            document.body.style.background = document.body.style.background === '#003087' ? '#FFFFFF' : '#003087';
+            document.body.style.backgroundColor = document.body.style.backgroundColor === '#003087' ? '#FFFFFF' : '#003087';
         }, 100);
+
+        // Spinny text
+        setInterval(() => {
+            document.getElementById('spinny').style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                document.getElementById('spinny').style.transform = 'rotate(0deg)';
+            }, 500);
+        }, 1000);
     </script>
 </body>
 </html>

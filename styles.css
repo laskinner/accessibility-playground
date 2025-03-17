@@ -1,12 +1,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fff;
+    background: #FFFFFF; /* UWA neutral white */
 }
 
-/* Nav Bar */
+/* Nav Bar - UWA Blue */
 nav {
-    background: #ffcc00; /* Bright, playful yellow */
+    background: #003087; /* UWA Blue */
     padding: 10px;
 }
 
@@ -23,7 +23,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ddd; /* Low contrast on yellow */
+    color: #B0C4DE; /* Light blue - low contrast on UWA Blue */
     text-decoration: none;
     font-size: 14px; /* Small font */
 }
@@ -33,49 +33,98 @@ nav ul li a {
     max-width: 800px;
     margin: 20px auto;
     text-align: center;
+    background: #FFF8E1; /* Pale gold background */
+    padding: 20px;
+    border: 2px solid #FFC107; /* UWA Gold border */
 }
 
 /* Accessibility Flaws */
 h1 {
-    color: #ccc; /* Bad contrast */
+    color: #CCCCCC; /* Grey - bad contrast on pale gold */
     font-size: 16px; /* Too small */
 }
 
 p {
-    color: #ddd; /* Barely readable */
+    color: #B0C4DE; /* Light blue - barely readable */
     font-size: 12px;
 }
 
 button, input[type="submit"] {
-    background: #eee;
-    color: #999; /* Low contrast */
-    border: 1px solid #ccc;
-    padding: 10px 20px; /* Bigger for playground feel */
+    background: #003087; /* UWA Blue */
+    color: #B0C4DE; /* Low contrast light blue */
+    border: 1px solid #FFC107; /* UWA Gold */
+    padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
-    margin-top: 20px; /* Spacing */
+    margin-top: 20px;
 }
 
 button:hover {
-    background: #ddd; /* Subtle hover, still low contrast */
+    background: #0041B8; /* Slightly lighter blue */
 }
 
 input[type="text"] {
-    border: 1px solid #ccc;
+    border: 1px solid #FFC107; /* UWA Gold */
     padding: 5px;
+    margin: 5px;
+}
+
+img {
+    margin: 10px;
+}
+
+ul {
+    list-style: none; /* No visual bullets */
+    padding: 0;
+}
+
+ul li {
+    color: #CCCCCC; /* Low contrast */
+    font-size: 12px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid #FFC107;
+    padding: 5px;
+    color: #B0C4DE; /* Low contrast */
+    font-size: 12px;
+}
+
+a {
+    color: #B0C4DE; /* Low contrast */
+    text-decoration: none;
 }
 
 #nonFocusable {
-    background: red;
+    background: #FFC107; /* UWA Gold */
     width: 100px;
     height: 100px;
     margin: 20px auto;
 }
 
 #nonFocusable:hover {
-    background: blue; /* No focus state */
+    background: #FFCA28; /* Brighter gold, no focus */
+}
+
+#fakeButton {
+    background: #003087;
+    color: #B0C4DE;
+    padding: 10px;
+    margin: 20px auto;
+    width: 120px;
 }
 
 p:nth-child(3) {
-    color: green; /* Color-only meaning */
+    color: #FFC107; /* UWA Gold - color-only meaning */
+}
+
+#spinny {
+    display: inline-block;
+    color: #CCCCCC;
+    transition: transform 0.5s;
 }
