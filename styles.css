@@ -50,8 +50,14 @@ button, input[type="submit"] {
     background: #eee;
     color: #999; /* Low contrast */
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 10px 20px; /* Bigger for playground feel */
+    font-size: 14px;
     cursor: pointer;
+    margin-top: 20px; /* Spacing */
+}
+
+button:hover {
+    background: #ddd; /* Subtle hover, still low contrast */
 }
 
 input[type="text"] {
