@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessibility Playground - Page 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="color: #ccc; font-size: 12px;">Page 3</h1>
+    
+    <div id="nonFocusable" style="background: red; width: 100px; height: 100px;"></div>
+    <p style="color: green;">Green means go!</p>
+    
+    <a href="index.html">Back Home</a>
+    
+    <script>
+        setInterval(() => {
+            document.body.style.background = document.body.style.background === 'black' ? 'white' : 'black';
+        }, 100);
+    </script>
+</body>
+</html>
