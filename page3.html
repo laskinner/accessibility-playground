@@ -2,44 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Accessibility Playground - Page 3</title>
+    <title>Accessibility Playground - Wild Whack-a-Mole</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="page2.html">Page 2</a></li>
-            <li><a href="page3.html">Page 3</a></li>
+            <li><a href="index.html">Counter Craze</a></li>
+            <li><a href="page2.html">Form Frenzy</a></li>
+            <li><a href="page3.html">Wild Whack-a-Mole</a></li>
         </ul>
     </nav>
     
     <div class="container">
-        <h1>Page 3: Wild Zone</h1>
+        <h1>Level 3: Wild Whack-a-Mole</h1>
         
-        <div id="nonFocusable">Click Me!</div>
-        <p>Gold means go!</p>
+        <div id="nonFocusable">Whack Me!</div>
+        <p>Gold means GO, Blue means STOP!</p>
         
-        <button onclick="alert('Surprise!')">Annoying Popup</button>
-        <div id="fakeButton">I’m a Button (Not Really)</div>
+        <button onclick="alert('YOU WON... NOTHING!')">Prize Popper</button>
+        <div id="fakeButton">Whack This (Nope!)</div>
         
-        <p>Watch this spin:</p>
-        <span id="spinny">Wheeee</span>
+        <p>Chase the mole:</p>
+        <span id="mole">🐭</span>
+        
+        <div id="flashingSign">WINNER???</div>
+        <div id="discoBall">DISCO TIME</div>
+        <span id="flickerText">DANCE!</span>
     </div>
     
     <script>
-        // Fix flickering
+        // Disco background flicker (20 Hz)
         setInterval(() => {
             document.body.style.backgroundColor = document.body.style.backgroundColor === '#003087' ? '#FFFFFF' : '#003087';
+        }, 50);
+
+        // Mole movement
+        setInterval(() => {
+            const mole = document.getElementById('mole');
+            mole.style.position = 'relative';
+            mole.style.left = `${Math.random() * 200 - 100}px`;
+            mole.style.top = `${Math.random() * 200 - 100}px`;
+        }, 800);
+
+        // Flashing sign (faster)
+        setInterval(() => {
+            document.getElementById('flashingSign').style.color = document.getElementById('flashingSign').style.color === '#FFC107' ? '#003087' : '#FFC107';
         }, 100);
 
-        // Spinny text
+        // Disco ball flicker (25 Hz)
         setInterval(() => {
-            document.getElementById('spinny').style.transform = 'rotate(360deg)';
-            setTimeout(() => {
-                document.getElementById('spinny').style.transform = 'rotate(0deg)';
-            }, 500);
-        }, 1000);
+            document.getElementById('discoBall').style.backgroundColor = document.getElementById('discoBall').style.backgroundColor === '#FFC107' ? '#003087' : '#FFC107';
+        }, 40);
+
+        // Flicker text (30 Hz)
+        setInterval(() => {
+            document.getElementById('flickerText').style.visibility = document.getElementById('flickerText').style.visibility === 'hidden' ? 'visible' : 'hidden';
+        }, 33);
     </script>
 </body>
 </html>

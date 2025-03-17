@@ -1,12 +1,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #FFFFFF; /* UWA neutral white */
+    background: #FFFFFF;
 }
 
 /* Nav Bar - UWA Blue */
 nav {
-    background: #003087; /* UWA Blue */
+    background: #003087;
     padding: 10px;
 }
 
@@ -23,9 +23,9 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #B0C4DE; /* Light blue - low contrast on UWA Blue */
+    color: #B0C4DE; /* Low contrast */
     text-decoration: none;
-    font-size: 14px; /* Small font */
+    font-size: 14px;
 }
 
 /* Container */
@@ -33,53 +33,56 @@ nav ul li a {
     max-width: 800px;
     margin: 20px auto;
     text-align: center;
-    background: #FFF8E1; /* Pale gold background */
+    background: #FFF8E1;
     padding: 20px;
-    border: 2px solid #FFC107; /* UWA Gold border */
+    border: 2px solid #FFC107;
 }
 
 /* Accessibility Flaws */
 h1 {
-    color: #CCCCCC; /* Grey - bad contrast on pale gold */
-    font-size: 16px; /* Too small */
+    color: #CCCCCC; /* Bad contrast */
+    font-size: 16px;
 }
 
 p {
-    color: #B0C4DE; /* Light blue - barely readable */
+    color: #B0C4DE; /* Barely readable */
     font-size: 12px;
 }
 
 button, input[type="submit"] {
-    background: #003087; /* UWA Blue */
-    color: #B0C4DE; /* Low contrast light blue */
-    border: 1px solid #FFC107; /* UWA Gold */
+    background: #003087;
+    color: #B0C4DE;
+    border: 1px solid #FFC107;
     padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 10px;
 }
 
 button:hover {
-    background: #0041B8; /* Slightly lighter blue */
+    background: #0041B8;
 }
 
 input[type="text"] {
-    border: 1px solid #FFC107; /* UWA Gold */
+    border: 1px solid #FFC107;
     padding: 5px;
     margin: 5px;
+    background: #FFF8E1;
+    color: #CCCCCC; /* Low contrast */
+    transition: transform 0.5s;
 }
 
 img {
     margin: 10px;
 }
 
-ul {
-    list-style: none; /* No visual bullets */
+ul.leaderboard {
+    list-style: none;
     padding: 0;
 }
 
-ul li {
-    color: #CCCCCC; /* Low contrast */
+ul.leaderboard li {
+    color: #CCCCCC;
     font-size: 12px;
 }
 
@@ -91,40 +94,72 @@ table {
 table td {
     border: 1px solid #FFC107;
     padding: 5px;
-    color: #B0C4DE; /* Low contrast */
+    color: #B0C4DE;
     font-size: 12px;
 }
 
 a {
-    color: #B0C4DE; /* Low contrast */
+    color: #B0C4DE;
     text-decoration: none;
 }
 
-#nonFocusable {
-    background: #FFC107; /* UWA Gold */
+#nonFocusable, #fakeButton, #fakeCounter {
+    background: #FFC107;
+    color: #FFF8E1; /* Low contrast */
     width: 100px;
     height: 100px;
+    line-height: 100px;
     margin: 20px auto;
+    font-size: 14px;
 }
 
-#nonFocusable:hover {
-    background: #FFCA28; /* Brighter gold, no focus */
+#nonFocusable:hover, #fakeButton:hover, #fakeCounter:hover {
+    background: #FFCA28;
 }
 
-#fakeButton {
-    background: #003087;
-    color: #B0C4DE;
-    padding: 10px;
-    margin: 20px auto;
-    width: 120px;
+#hoverSecret {
+    color: #FFF8E1; /* Invisible until hover */
 }
 
-p:nth-child(3) {
-    color: #FFC107; /* UWA Gold - color-only meaning */
+#hoverSecret:hover {
+    color: #B0C4DE; /* Still bad contrast */
 }
 
-#spinny {
-    display: inline-block;
+#spinnyForm {
     color: #CCCCCC;
-    transition: transform 0.5s;
+    font-size: 12px;
+    animation: spin 2s infinite;
+}
+
+#mole {
+    font-size: 24px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+#flashingSign {
+    font-size: 18px;
+    color: #FFC107;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#discoBall {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #FFC107; /* UWA Gold */
+    margin: 20px auto;
+    line-height: 80px;
+    color: #B0C4DE; /* Low contrast */
+    font-size: 12px;
+}
+
+#flickerText {
+    display: inline-block;
+    color: #CCCCCC; /* Bad contrast */
+    font-size: 14px;
 }

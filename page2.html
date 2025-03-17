@@ -2,32 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Accessibility Playground - Page 2</title>
+    <title>Accessibility Playground - Form Frenzy</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="page2.html">Page 2</a></li>
-            <li><a href="page3.html">Page 3</a></li>
+            <li><a href="index.html">Counter Craze</a></li>
+            <li><a href="page2.html">Form Frenzy</a></li>
+            <li><a href="page3.html">Wild Whack-a-Mole</a></li>
         </ul>
     </nav>
     
     <div class="container">
-        <h1>Page 2: More Chaos</h1>
+        <h1>Level 2: Form Frenzy</h1>
         
         <img src="https://via.placeholder.com/150">
         <img src="https://via.placeholder.com/100">
+        <img src="https://via.placeholder.com/50">
         
         <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <input type="submit" value="Submit">
+            <input type="text" placeholder="WHAT AM I?">
+            <input type="text" placeholder="WHO CARES?">
+            <input type="text" placeholder="SPIN ME!">
+            <input type="submit" value="SUBMIT TO CHAOS">
         </form>
         
-        <p>Check these out:</p>
-        <a href="#">Link 1</a> | <a href="#">Link 2</a>
+        <p>Pick a prize:</p>
+        <a href="#">Gold?</a> | <a href="#">Blue?</a> | <a href="#">Nothing?</a>
+        
+        <div id="spinnyForm">Spinning Surprise!</div>
     </div>
+
+    <script>
+        setInterval(() => {
+            document.querySelectorAll('input[type="text"]')[2].style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                document.querySelectorAll('input[type="text"]')[2].style.transform = 'rotate(0deg)';
+            }, 500);
+        }, 1000);
+    </script>
 </body>
 </html>
