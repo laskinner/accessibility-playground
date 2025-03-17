@@ -1,7 +1,75 @@
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: #fff;
 }
 
-a {
-    text-decoration: none; /* Links not visually distinct */
+/* Nav Bar */
+nav {
+    background: #ffcc00; /* Bright, playful yellow */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ddd; /* Low contrast on yellow */
+    text-decoration: none;
+    font-size: 14px; /* Small font */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Accessibility Flaws */
+h1 {
+    color: #ccc; /* Bad contrast */
+    font-size: 16px; /* Too small */
+}
+
+p {
+    color: #ddd; /* Barely readable */
+    font-size: 12px;
+}
+
+button, input[type="submit"] {
+    background: #eee;
+    color: #999; /* Low contrast */
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+#nonFocusable {
+    background: red;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+}
+
+#nonFocusable:hover {
+    background: blue; /* No focus state */
+}
+
+p:nth-child(3) {
+    color: green; /* Color-only meaning */
 }
