@@ -1,10 +1,9 @@
-document.getElementById('counterBtn').addEventListener('mousedown', function() {
-    let count = parseInt(document.getElementById('count').innerText);
-    document.getElementById('count').innerText = count + 1;
+document.getElementById('counterBtnmd').addEventListener('mousedown', function() {
+    let count = parseInt(document.getElementById('countmd').innerText);
+    document.getElementById('countmd').innerText = count + 1;
 });
 
-document.getElementById('resetBtn').addEventListener('mousedown', function() {
-    if (Math.random() > 0.5) { // 50% chance of working
-        document.getElementById('count').innerText = '0';
-    }
+document.getElementById('counterBtnclick').addEventListener('click', function() {
+    let count = parseInt(document.getElementById('countclick').innerText);
+    document.getElementById('countclick').innerText = count + 1;
 });

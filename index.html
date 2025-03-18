@@ -2,39 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Accessibility Playground - Counter Craze</title>
+    <title>Accessibility Playground</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Counter Craze</a></li>
-            <li><a href="page2.html">Form Frenzy</a></li>
-            <li><a href="page3.html">Wild Whack-a-Mole</a></li>
+            <li><a href="index.html">Page</a></li> <!-- #10 Link to Nowhere -->
         </ul>
     </nav>
     
     <div class="container">
-        <h1>Level 1: Counter Craze</h1>
-        <p>Click as fast as you can... if you can!</p>
+        <h1>Welcome!</h1> <!-- #3 Letter Spacing, #4 Word Spacing, #1 Contrast --> 
+        <h2>The WCAG 2.2 compliance herein exemplifies obfuscatory paradigmatic discrepancies—discern the differential accessibility modalities!</h2> <!-- #6 Acronyms, #7 Complex Language -->
         
-        <button id="counterBtn">Smash Me: <span id="count">0</span></button>
-        <button id="resetBtn">Reset (Maybe)</button>
-        <div id="fakeCounter">Fake Counter: 999</div>
+        <p>Can you tell the difference between these two buttons?</p>
+        <p>Why is one accessible and the other not?</p>
+
+        <h1>A counter!</h1>
         
-        <ul class="leaderboard">
-            <li>Bob - 5 clicks</li>
-            <li>Sue - 3 clicks</li>
-            <li>You - 0 clicks</li>
-        </ul>
+        <button id="counterBtnmd">ClickMe! <span id="countmd">0</span></button> <!-- #5 Mousedown -->
+        <button id="counterBtnclick">AlsoClickMe! <span id="countclick">0</span></button>
         
-        <table>
-            <tr><td>Click Zone</td><td>Score</td></tr>
-            <tr><td>Here</td><td>???</td></tr>
-            <tr><td>There</td><td>???</td></tr>
-        </table>
-        
-        <p>Hover for secret: <span id="hoverSecret">NOTHING!</span></p>
+        <form>
+            <input type="text"> <!-- #8 Unlabeled Inputs -->
+            <input type="email">
+            <input type="submit" value="Submit">
+        </form>
+     
+        <p>Hover for secret: <span id="hoverSecret">Just kidding!</span></p> <!-- #9 Hidden content on hover -->
     </div>
 
     <script src="script.js"></script>
